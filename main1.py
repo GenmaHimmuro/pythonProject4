@@ -4,11 +4,11 @@ from PIL import Image
 image = Image.open("monro.jpg")
 blue,green,red = image.split()
 
-cropped_red = red.crop((50 , 0, image.width,image.height))
+cropped_red = red.crop((50,0,image.width,image.height))
 cropped_red1 = red.crop((25,0,671,image.height))
 image_red1 = Image.blend(cropped_red, cropped_red1, 0.5)
 
-cropped_blue=blue.crop((50 , 0, image.width,image.height))
+cropped_blue=blue.crop((0,0,646,image.height))
 cropped_blue1 = blue.crop((25,0,671,image.height))
 image_blue1 = Image.blend(cropped_blue, cropped_blue1, 0.5)
 
